@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary: #D8042A;
+  --primaryHover: #ff3059;
+  --text: #eee;
+}
+
+* {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.button-default {
+  display: block;
+  background-color: var(--primary);
+  padding: 8px 12px;
+  color: var(--text);
+  border-radius: 6px;
+  transition: 400ms;
+}
+
+.hero_background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.hero_background::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 45%;
+  background-color: var(--primary);
+  border-radius: 50%;
+  left: -15%;
+  top: 10%;
+  filter: blur(100px);
+  opacity: 0.3;
+}
+
+.hero_background::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 45%;
+  background-color: var(--primary);
+  border-radius: 50%;
+  right: -15%;
+  bottom: -18%;
+  filter: blur(100px);
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 425px) {
+  .hero_background::after {
+    display: none;
+  }
+}

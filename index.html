@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animation scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#D8042A',
+            primaryHover: '#ff6d29',
+            darkBg: '#121212',
+            darkContentBg: '#1A1617',
+          }
+        },
+        container: {
+          center: true,
+          padding: {
+            DEFAULT: '1rem',
+            sm: '2rem',
+            lg: '4rem',
+            xl: '5rem',
+            '2xl': '6rem',
+          },
+        },
+      }
+    }
+  </script>
+
+  <link rel="icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="./styles.css">
+
+  <title>Document</title>
+</head>
+
+<body class="text-white relative">
+  <div class="hero_background"></div>
+
+  <nav class="shadow overflow-y-hidden bg-darkContentBg">
+    <div class="container flex items-center justify-between py-3">
+      <div class="relative z-20" data-aos="fade-right">
+        <a href="/">
+          <img src="./assets/logo.png" class="w-12 md:w-14" alt="LOGO">
+        </a>
+      </div>
+
+      <div id="links" data-aos="fade-left"
+        class="relative z-20 hidden bg-darkBg md:bg-transparent w-full md:flex flex-col md:flex-row justify-center items-center gap-7 left-0 top-0 md:static h-screen md:h-auto md:block z-50 w-full relative md:w-auto flex items-center">
+        <box-icon name='x' onclick="closeMenu()" color="white" onclick="closeMenu()"
+          class="md:hidden absolute right-5 top-5"></box-icon>
+        <a onclick="closeMenu()" class="my-2 text-gray-300 transition-colors duration-300 transform hover:text-primary"
+          href="/">Home</a>
+        <a onclick="closeMenu()" class="my-2 text-gray-300 transition-colors duration-300 transform hover:text-primary"
+          href="#about">Shop</a>
+        <a onclick="closeMenu()" class="my-2 text-gray-300 transition-colors duration-300 transform hover:text-primary"
+          href="#about">About</a>
+        <a onclick="closeMenu()" class="my-2 text-gray-300 transition-colors duration-300 transform hover:text-primary"
+          href="#contact">Contact</a>
+
+      </div>
+
+      <div class="md:hidden relative z-20">
+        <box-icon name='menu' onclick="openPhoneMenu()" color="white" onclick="openPhoneMenu()"></box-icon>
+      </div>
+    </div>
+  </nav>
+
+  <main class="overflow-x-hidden bg-darkContentBg z-20">
+
+    <section class="min-h-screen relative z-20">
+      <div class="container z-20" data-aos="fade-up">
+        <div class="flex md:justify-between flex-col md:flex-row items-center justify-center min-h-[75vh]">
+          <div class="space-y-4 mt-5 md:mt-0">
+            <h3 class="uppercase text-4xl md:text-5xl mt-6 md:mt-0 font-semibold w-full md:w-5/6">
+              Your Business <span class="text-primary">Partner</span>
+            </h3>
+            <p class="font-semibold w-full md:w-4/6 text-gray-200 text-sm">
+              Revolta powers full-funnel strategy and performance solutions for global brands
+            </p>
+
+            <!-- CTA Button -->
+            <button class="button-default" id="CTA">Book a call</button>
+          </div>
+
+          <img src="./assets/hero.png" class="my-14 md:my-0" alt="hero_image" />
+        </div>
+    </section>
+
+    <section>
+      <div class="container min-h-[40vh] flex items-center mb-6 md:mb-0">
+        <div>
+          <h3 class="text-3xl md:text-5xl font-semibold mb-6">Partner with a <span class="text-primary">modern</span> growth team
+          </h3>
+          <p class="md:w-4/6 mb-3">Answer key business questions and scale winning combinations of message and design
+            across your brand's
+            digital
+            footprint.</p>
+          <p class="md:w-4/6">Build your sustainable, competitive advantage through data-driven creative.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container min-h-[100vh] py-6">
+        <h2 class="text-center text-4xl font-semibold">Our services</h2>
+        <div class="grid md:grid-cols-4 gap-5 my-10 md:my-20">
+          <div class="bg-primary rounded-md px-5 py-10">
+            <div class="mb-6">
+              <img width="65" height="65" src="https://img.icons8.com/ffffff/glyph-neue/64/drawing.png" alt="magnet" />
+            </div>
+            <h3 class="text-3xl font-bold">Branding</h3>
+            <p class="text-sm mt-2">Elevate your brand and captivate your audience. Our comprehensive branding services
+              include logo design, brand identity development, and brand messaging to create a strong and recognizable
+              brand that resonates with your target market.</p>
+          </div>
+          <div class="bg-primary rounded-md px-5 py-10">
+            <div class="mb-6">
+              <img width="65" height="65" src="https://img.icons8.com/ffffff/pastel-glyph/magnet.png" alt="magnet" />
+            </div>
+            <h3 class="text-3xl font-bold">Retention</h3>
+            <p class="text-sm mt-2">Elevate your customer retention efforts with our comprehensive email marketing
+              solutions. We meticulously craft targeted email sequences designed to nurture leads, re-engage inactive
+              customers, and foster long-term brand loyalty</p>
+          </div>
+
+          <div class="bg-primary rounded-md px-5 py-10">
+            <div class="mb-6">
+              <img width="65" height="65" src="https://img.icons8.com/ffffff/pastel-glyph/bullish--v1.png"
+                alt="magnet" />
+            </div>
+            <h3 class="text-3xl font-bold">Followers growth</h3>
+            <p class="text-sm mt-2">Increase your social media following with our targeted growth strategies. We’ll help
+              you attract real, engaged followers who are interested in your content</p>
+          </div>
+
+          <div class="bg-primary rounded-md px-5 py-10">
+            <div class="mb-6">
+              <img width="65" height="65" src="https://img.icons8.com/ffffff/pastel-glyph/magnet.png" alt="magnet" />
+            </div>
+            <h3 class="text-3xl font-bold">Sales</h3>
+            <p class="text-sm mt-2">Empower your sales team with the tools and knowledge they need to close more deals.
+              Our comprehensive sales enablement solutions include sales training, content marketing, and sales
+              technology to drive revenue growth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container min-h-[100vh] py-6">
+        <h2 class="text-center text-4xl font-semibold">Why choose Revolta?</h2>
+        <div class="grid md:grid-cols-4 gap-5 my-20">
+          <div class="bg-darkBg rounded-md px-5 py-14">
+            <div class="flex justify-center items-center">
+              <div class="bg-primary p-3 rounded-3xl flex justify-center items-center">
+                <box-icon name='message-square-detail' size="40px" color="#fff"></box-icon>
+              </div>
+            </div>
+            <h3 class="text-3xl font-bold mt-8 text-center">Free Consultancy</h3>
+          </div>
+
+          <div class="bg-darkBg rounded-md px-5 py-14">
+            <div class="flex justify-center items-center">
+              <div class="bg-primary p-3 rounded-3xl flex justify-center items-center">
+                <box-icon name='bar-chart-square' size="40px" color="#fff"></box-icon>
+              </div>
+            </div>
+            <h3 class="text-3xl font-bold mt-8 text-center">Data Driven Approach</h3>
+          </div>
+
+          <div class="bg-darkBg rounded-md px-5 py-14">
+            <div class="flex justify-center items-center">
+              <div class="bg-primary p-3 rounded-3xl flex justify-center items-center">
+                <box-icon name='user-check' size="40px" color="#fff"></box-icon>
+              </div>
+            </div>
+            <h3 class="text-3xl font-semibold mt-8 text-center">Verified Partners</h3>
+          </div>
+
+          <div class="bg-darkBg rounded-md px-5 py-14">
+            <div class="flex justify-center items-center">
+              <div class="bg-primary p-3 rounded-3xl flex justify-center items-center">
+                <box-icon name='group' size="40px" color="#fff"></box-icon>
+              </div>
+            </div>
+            <h3 class="text-3xl font-bold mt-8 text-center">Team of Experts</h3>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="w-full min-h-[50vh] bg-primary flex items-center">
+        <div class="container grid md:grid-cols-4 gap-10 md:gap-0 py-10 md:py-0">
+          <div class="flex flex-col items-center">
+            <span class="text-6xl font-bold">+1000</span>
+            <p class="mt-1 md:mt-3">Brand Partners</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-6xl font-bold">+633</span>
+            <p class="mt-1 md:mt-3">Clients</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-6xl font-bold">+5</span>
+            <p class="mt-1 md:mt-3">Years of experience</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-6xl font-bold">+500</span>
+            <p class="mt-1 md:mt-3">Campaigns</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class='container overflow-x-hidden'>
+      <div class='min-h-[70vh] flex items-center'>
+        <div>
+          <div>
+            <h3 class='uppercase text-main font-bold text-3xl'>Contact us</h3>
+            <p class='text-gray-300 md:text-xl'>hit us with a message or a call, our team will respond within 12hrs</p>
+          </div>
+
+          <div class='flex md:items-center gap-10 my-8 flex-col md:flex-row flex-wrap'>
+            <div class='flex gap-5 items-center'>
+              <div class='rounded-3xl bg-primary flex justify-center items-center p-3'>
+                <box-icon name='mail-send' class="relative right-[1px]" size="md" color="white"></box-icon>
+              </div>
+              <div>
+                <h3 class='text-2xl font-semibold text-gray-100'>Mail</h3>
+                <p class='text-gray-400'>revolta@gmail.com</p>
+              </div>
+            </div>
+            <div class='flex gap-5 items-center'>
+              <div class='rounded-3xl bg-primary flex justify-center items-center p-3'>
+                <box-icon name='phone' class="relative right-[1px]" size="md" color="white"></box-icon>
+              </div>
+              <div>
+                <h3 class='text-2xl font-semibold text-gray-100'>Phone</h3>
+                <p class='text-gray-400'>
+                  0658444368
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-darkBg">
+    <div class="container grid grid-cols-1 items-center md:grid-cols-3 gap-4 md:gap-0 w-full py-6">
+      <a href="/">
+        <img src="./assets/logo.png" class="w-14" alt="LOGO">
+      </a>
+
+      <div class='flex md:justify-center'>
+        <p class="text-sm text-gray-200">© Copyright 2024. All Rights Reserved.</p>
+      </div>
+
+      <div class="flex justify-end gap-3">
+        <a target='_blank' href="/" class="text-slate-500 hover:text-slate-700 transition-colors duration-300"
+          aria-label="Facebook">
+          <box-icon type='logo' color="#eee" name='instagram-alt'></box-icon>
+        </a>
+
+        <a target='_blank' href="https://github.com/imad273"
+          class="text-slate-500 hover:text-slate-700 transition-colors duration-300" aria-label="Github">
+
+          <box-icon type='logo' name='whatsapp' color="#eee"></box-icon>
+        </a>
+
+        <a target='_blank' href="https://github.com/imad273"
+          class="text-slate-500 hover:text-slate-700 transition-colors duration-300" aria-label="Github">
+          <box-icon type='logo' name='facebook-circle' color="#eee"></box-icon>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
